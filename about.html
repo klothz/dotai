@@ -32,30 +32,7 @@
     <div id="main">
         <!-- header start  -->
         <header class="main-header">
-            <!-- logo   -->
-            <a href="index.html" class="logo-holder"><img src="images/logo.png" alt=""></a>
-            <!-- logo end  -->
-            <div class="search-button"><i class="far fa-search"></i></div>
-            <div class="search-input"><input name="se" id="se" type="text" class="search" placeholder="Search.." />
-            </div>
-            <!-- mobile nav end-->
-            <!--  navigation -->
-            <div class="nav-holder main-menu">
-                <nav>
-                    <ul>
-                        <li>
-                            <a href="index2.html" class="act-link">Home </a>
-                        </li>
-                        <li>
-                            <a href="portfolio4.html">All Products </a>
-                        </li>
-                        <li>
-                            <a href="about.html">About</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-            <!-- navigation  end -->
+            <div id="navigation"></div>
         </header>
         <!-- header end -->
         <!-- wrapper  -->
@@ -145,7 +122,8 @@
                                         <div class="inline-facts">
                                             <div class="milestone-counter">
                                                 <div class="stats animaper">
-                                                    <div class="num" data-content="2147483647" data-num="2147483647">2147483647</div>
+                                                    <div class="num" data-content="2147483647" data-num="2147483647">
+                                                        2147483647</div>
                                                 </div>
                                             </div>
                                             <h6>Neural Nets Tricked </h6>
@@ -245,6 +223,26 @@
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/plugins.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
+    <script src="js/mgGlitch.min.js"></script>
+    <script>
+        $(function () {
+            $("#navigation").load("nav.html");
+        });
+        $(function () {
+            $(".glitch-img").mgGlitch({
+                destroy: false, // set 'true' to stop the plugin
+                glitch: true, // set 'false' to stop glitching
+                scale: true, // set 'false' to stop scaling
+                blend: true, // set 'false' to stop glitch blending
+                blendModeType: 'hue', // select blend mode type
+                glitch1TimeMin: 600, // set min time for glitch 1 elem
+                glitch1TimeMax: 900, // set max time for glitch 1 elem
+                glitch2TimeMin: 10, // set min time for glitch 2 elem
+                glitch2TimeMax: 115, // set max time for glitch 2 elem
+                zIndexStart: 8, // because of absolute position, set z-index base value
+            });
+        });
+    </script>
 </body>
 
 </html>
