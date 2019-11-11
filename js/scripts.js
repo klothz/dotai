@@ -238,6 +238,7 @@
                      $(".opt-two").html(fsslideract2);
                      $(".opt-three").html(fsslideract3);
                      $(".hero-slider_details_url").attr("href", fsslideurl);
+                     priceToHex();
                  },
              }
          });
@@ -312,7 +313,17 @@
                      ease: Power2.easeOut
                  });
              }, 110 * ace);
+             priceToHex();
          });
+         var elements = document.getElementsByClassName("opt-two");
+
+         for (const element of elements) {
+             let priceElement = element.getElementsByClassName("price")[0];
+             let temp = priceElement.textContent;
+             temp = temp.replace("$", "");
+             temp = parseInt(temp);
+             priceElement.textContent = "$0x" + temp.toString(16);
+        };
      }
      if ($(".fs-slider2").length > 0) {
          $(".fs-slider2.thumb-contr .swiper-slide .bg").each(function() {
@@ -1183,3 +1194,16 @@ $(window).on("load", function() {
      initKotlis();
      removideo();
  });
+
+
+function priceToHex() {
+    var elements = document.getElementsByClassName("opt-two");
+
+    for (const element of elements) {
+        let priceElement = element.getElementsByClassName("price")[0];
+        let temp = priceElement.textContent;
+        temp = temp.replace("$", "");
+        temp = parseInt(temp);
+        priceElement.textContent = "$0x" + temp.toString(16);
+    }
+};

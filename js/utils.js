@@ -1,16 +1,4 @@
 $(function () {
-
-    var elements = document.getElementsByClassName("price");
-
-    for (const price of elements) {
-        let temp = price.textContent;
-        temp = temp.replace("$", "");
-        temp = parseInt(temp);
-        price.textContent = "$0x" + temp.toString(16);
-    }
-});
-
-$(function () {
     $("#navigation").load("nav.html");
 });
 $(function () {
