@@ -49,7 +49,7 @@
                                     <!-- swiper-slide-->
                                     <div class="swiper-slide hov_zoom"
                                         data-fsslideropt1="Name <a class='blink' style='color: white'>></a> <span>Hoodie</span>"
-                                        data-fsslideropt2="Price <a class='blink' style='color: white'>></a> <span>$150</span>"
+                                        data-fsslideropt2="Price <a class='blink' style='color: white'>></a> <span class='price'>$150</span>"
                                         data-fsslideropt3="Size <a class='blink' style='color: white'>></a> <span>XS S M L XL</span>"
                                         data-fssurl="portfolio-single.html">
                                         <div class="fs-slider-item fl-wrap">
@@ -69,7 +69,7 @@
                                     <!-- swiper-slide-->
                                     <div class="swiper-slide hov_zoom"
                                         data-fsslideropt1="Name <a class='blink' style='color: white'>></a> <span>Hoodie</span>"
-                                        data-fsslideropt2="Price <a class='blink' style='color: white'>></a> <span>$150</span>"
+                                        data-fsslideropt2="Price <a class='blink' style='color: white'>></a> <span class='price'>$150</span>"
                                         data-fsslideropt3="Size <a class='blink' style='color: white'>></a> <span>XS S M L XL</span>"
                                         data-fssurl="portfolio-single2.html">
                                         <div class="fs-slider-item fl-wrap">
@@ -89,7 +89,7 @@
                                     <!-- swiper-slide-->
                                     <div class="swiper-slide hov_zoom"
                                         data-fsslideropt1="Name <a class='blink' style='color: white'>></a> <span>Hoodie</span>"
-                                        data-fsslideropt2="Price <a class='blink' style='color: white'>></a> <span>$150</span>"
+                                        data-fsslideropt2="Price <a class='blink' style='color: white'>></a> <span class='price'>$150</span>"
                                         data-fsslideropt3="Size <a class='blink' style='color: white'>></a> <span>XS S M L XL</span>"
                                         data-fssurl="portfolio-single.html">
                                         <div class="fs-slider-item fl-wrap">
@@ -109,7 +109,7 @@
                                     <!-- swiper-slide-->
                                     <div class="swiper-slide hov_zoom"
                                         data-fsslideropt1="Name <a class='blink' style='color: white'>></a> <span>Hoodie</span>"
-                                        data-fsslideropt2="Price <a class='blink' style='color: white'>></a> <span>$150</span>"
+                                        data-fsslideropt2="Price <a class='blink' style='color: white'>></a> <span class='price'>$150</span>"
                                         data-fsslideropt3="Size <a class='blink' style='color: white'>></a> <span>XS S M L XL</span>"
                                         data-fssurl="portfolio-single.html">
                                         <div class="fs-slider-item fl-wrap">
@@ -250,25 +250,7 @@
         <script type="text/javascript" src="js/plugins.js"></script>
         <script type="text/javascript" src="js/scripts.js"></script>
         <script src="js/mgGlitch.min.js"></script>
-        <script>
-            $(function () {
-                $("#navigation").load("nav.html");
-            });
-            $(function () {
-                $(".glitch-img").mgGlitch({
-                    destroy: false, // set 'true' to stop the plugin
-                    glitch: true, // set 'false' to stop glitching
-                    scale: true, // set 'false' to stop scaling
-                    blend: true, // set 'false' to stop glitch blending
-                    blendModeType: 'hue', // select blend mode type
-                    glitch1TimeMin: 600, // set min time for glitch 1 elem
-                    glitch1TimeMax: 900, // set max time for glitch 1 elem
-                    glitch2TimeMin: 10, // set min time for glitch 2 elem
-                    glitch2TimeMax: 115, // set max time for glitch 2 elem
-                    zIndexStart: 8, // because of absolute position, set z-index base value
-                });
-            });
-        </script>
+        <script src="js/utils.js"></script>
 </body>
 
 </html>
