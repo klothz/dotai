@@ -98,6 +98,7 @@
         $.ajax({
             url: "https://0isykk2a2g.execute-api.us-east-1.amazonaws.com/Prod/getitem",
             type: 'GET',
+            headers: {'Access-Control-Allow-Origin':'*'},
             dataType: "jsonp",
             success: function (result) {
                 items = JSON.parse(result);
