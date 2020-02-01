@@ -96,11 +96,12 @@
     <script>
         var items = []
         $.ajax({
-            type: "GET",
             url: "https://0isykk2a2g.execute-api.us-east-1.amazonaws.com/Prod/getitem",
+            type: 'GET',
+            dataType: "jsonp",
             success: function (result) {
                 items = JSON.parse(result);
-                console.log(items)
+                console.log(items[0])
                 // items.forEach(appendItemHTML);
             }
         });
