@@ -93,17 +93,22 @@
     <script src="js/mgGlitch.min.js"></script>
     <script src="js/utils.js"></script>
 
-    <!-- <script>
-    $(function () {
-        $.ajax(
-            "https://github.com/plebeiathon/MotleyMoves/blob/master/Front-end/assets/js/map.js",{
+    <script>
+        var items = []
+        $.ajax({
             type: "GET",
-            url: 'http://www.example.org',
-            success: function (xml) {
+            url: "https://0isykk2a2g.execute-api.us-east-1.amazonaws.com/Prod/getitem",
+            success: function (result) {
+                items = JSON.parse(result);
+                console.log(items)
+                // items.forEach(appendItemHTML);
             }
         });
-    });
-    </script> -->
+
+        $(function appendItemHTML() {
+            
+        });
+    </script>
 </body>
 
 </html>
