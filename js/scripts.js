@@ -1147,48 +1147,6 @@
      if (trueMobile) $(".bgvid , .background-vimeo , .background-youtube-wrapper").remove();
  }
 
- //   instagram ------------------	
- var actoket = $('#insta-content').data("instatoken");
- var token = actoket,
-     num_photos = 6;
- $.ajax({
-     url: 'https://api.instagram.com/v1/users/self/media/recent',
-     dataType: 'jsonp',
-     type: 'GET',
-     data: {
-         access_token: token,
-         count: num_photos
-     },
-     success: function(data) {
-         for (x in data.data) {
-             $('#insta-content').append('<a target="_blank" href="' + data.data[x].link + '"><img src="' + data.data[x].images.low_resolution.url + '"></a>');
-         }
-     },
-     error: function(data) {
-         console.log(data);
-     }
- });
- // twitter ------------------
- if ($("#footer-twiit").length > 0) {
-     var config1 = {
-         "profile": {
-             "screenName": 'katokli3mmm'
-         },
-         "domId": 'footer-twiit',
-         "maxTweets": 2,
-         "enableLinks": true,
-         "showImages": false
-     };
-     twitterFetcher.fetch(config1);
- }
- $(".hiiden-sidebar-wrap").niceScroll({
-     cursorwidth: "0px",
-     cursorborder: "none",
-     cursorborderradius: "0px",
-     scrollspeed: 10,
-     mousescrollstep: 40,
-     hwacceleration: true,
- });
  //   Init All Functions------------------
 $(window).on("load", function() {
      initKotlis();
