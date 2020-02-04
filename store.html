@@ -97,19 +97,18 @@
         var items = []
         $.ajax({
             url: "https://0isykk2a2g.execute-api.us-east-1.amazonaws.com/Prod/getitem",
-            type: 'GET',
-            headers: {'Access-Control-Allow-Origin':'*'},
-            dataType: "jsonp",
+            method: 'GET',
+            dataType : 'jsonp',
+            headers: {"Access-Control-Allow-Origin": "*"},
             success: function (result) {
-                items = JSON.parse(result);
-                console.log(items)
-                // items.forEach(appendItemHTML);
+                console.log(result)
+                appendItemHTML();
             }
         });
 
-        $(function appendItemHTML() {
-            
-        });
+        function appendItemHTML() {
+            console.log(items)
+        };
     </script>
 </body>
 
