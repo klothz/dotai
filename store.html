@@ -100,7 +100,7 @@
             method: 'GET',
             success: function (json) {
                 items = json;
-                items.forEach(appendItemHTML)
+                items.forEach(appendItemHTML);
             }
         });
 
@@ -109,7 +109,7 @@
                 $.parseHTML(
                     '<div class="gallery-item ' + item.type + '">' +
                         '<div class="grid-item-holder hov_zoom">' +
-                            '<img src="images/folio/1.jpg" alt="">' +
+                            '<img src="' + item.s3_image + '" alt="">' +
                             '<a href="images/folio/1.jpg" class="box-media-zoom popup-image"><i class="fal fa-search"></i></a>' +
                             '<div class="thumb-info">' +
                                 '<h3><a href="portfolio-single.html">' + item.itemName + '</a></h3>' +
