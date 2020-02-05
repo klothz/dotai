@@ -548,102 +548,6 @@
              },
          });
      }
-     //   Isotope------------------		
-     function inithorizontalPortfolio() {
-         if ($("#portfolio_horizontal_container").length) {
-             var d = $("#portfolio_horizontal_container");
-             d.imagesLoaded(function(a, b, e) {
-                 var f = {
-                     itemSelector: ".portfolio_item",
-                     layoutMode: "packery",
-                     packery: {
-                         isHorizontal: true,
-                         gutter: 0
-                     },
-                     resizable: true,
-                     transformsEnabled: true,
-                     transitionDuration: "700ms"
-                 };
-                 var g = {
-                     itemSelector: ".portfolio_item",
-                     layoutMode: "packery",
-                     packery: {
-                         isHorizontal: false,
-                         gutter: 0
-                     },
-                     resizable: true,
-                     transformsEnabled: true,
-                     transitionDuration: "700ms"
-                 };
-                 if ($(window).width() < 778) {
-                     d.isotope(g);
-                     d.isotope("layout");
-                     d.removeAttr('style');
-                     $(".horizontal-grid-wrap").getNiceScroll().remove();
-                 } else {
-                     d.isotope(f);
-                     d.isotope("layout");
-                     $(".horizontal-grid-wrap").niceScroll({
-                         cursorwidth: "6px",
-                         cursorborder: "none",
-                         cursorborderradius: "0px",
-                         touchbehavior: true,
-                         autohidemode: false,
-                         cursorcolor: "#4D4D4D",
-                         bouncescroll: false,
-                         scrollspeed: 120,
-                         mousescrollstep: 90,
-                         grabcursorenabled: true,
-                         horizrailenabled: true,
-                         preservenativescrolling: true,
-                         cursordragontouch: false,
-                         railpadding: {
-                             top: -20,
-                             right: 0,
-                             left: 0,
-                             bottom: 0
-                         }
-                     });
-                 }
-                 $(".gallery-filters").on("click", "a", function(a) {
-                     a.preventDefault();
-                     var b = $(this).attr("data-filter");
-                     d.isotope({
-                         filter: b
-                     });
-                     $(".gallery-filters a").removeClass("gallery-filter-active");
-                     $(this).addClass("gallery-filter-active");
-                 });
-                 d.isotope("on", "layoutComplete", function(a, b) {
-                     var b = a.length,
-                         numalb = $(".num-album");
-                     TweenMax.to(numalb, 0.2, {
-                         force3D: true,
-                         y: -10,
-                         opacity: 0,
-                         ease: Power2.easeOut,
-                         onComplete: function() {
-                             TweenMax.to(numalb, 0.1, {
-                                 force3D: true,
-                                 y: 10
-                             });
-                             numalb.html(b);
-                         }
-                     });
-                     TweenMax.to(numalb, 0.2, {
-                         force3D: true,
-                         y: 0,
-                         delay: 0.3,
-                         opacity: 1,
-                         ease: Power2.easeOut
-                     });
-                 });
-                 var j = $(".portfolio_item").length;
-                 $(".all-album , .num-album").html(j);
-             });
-         }
-     }
-     inithorizontalPortfolio();
      $(".filter-title").on("click", function() {
          if ($(window).width() < 1064) {
              $(".gallery-filters").slideToggle(100);
@@ -959,7 +863,6 @@
      //   css ------------------
      $(window).on("resize", function() {
          csselem();
-         inithorizontalPortfolio();
          mobMenuInit();
 		  	setUpCarouselSlider();
      });		

@@ -48,14 +48,15 @@
                         <span>Scroll down to discover</span>
                     </div>
                     <div class="filter-title">Filters <i class="fal fa-long-arrow-right"></i></div>
-                    <div class="gallery-filters">
-                        <a href="#" class="gallery-filter  gallery-filter-active" data-filter="*">All</a>
-                        <a href="#" class="gallery-filter" data-filter=".shirts">T-Shirts</a>
-                        <a href="#" class="gallery-filter" data-filter=".jackets">Jackets && Hoodies</a>
-                        <a href="#" class="gallery-filter" data-filter=".bottoms">Bottoms</a>
-                        <a href="#" class="gallery-filter" data-filter=".misc">Misc</a>
+                    <div class="gallery-filters" id="buttonContainer">
+                        <a href="#" class="gallery-filter  gallery-filter-active" onclick="filterSelection('all')">All</a>
+                        <a href="#" class="gallery-filter" onclick="filterSelection('shirts')">T-Shirts</a>
+                        <a href="#" class="gallery-filter" onclick="filterSelection('outerwear')">Jackets && Hoodies</a>
+                        <a href="#" class="gallery-filter" onclick="filterSelection('bottoms')">Bottoms</a>
+                        <a href="#" class="gallery-filter" onclick="filterSelection('misc')">Misc</a>
                     </div>
                     <div class="count-folio round-counter">
+                        <div id="num-album"></div>
                         <div id="all-album"></div>
                     </div>
                 </div>
@@ -92,7 +93,9 @@
     <script src="js/mgGlitch.min.js"></script>
     <script src="js/utils.js"></script>
 
+    <!-- Dynamically Loading Items from the DB -->
     <script>
+
         var items = []
         var element = document.getElementById("items");
         $.ajax({
@@ -101,7 +104,9 @@
             success: function (json) {
                 items = json;
                 items.forEach(appendItemHTML);
-                $('#all-album').html(element.childElementCount)
+                $('#all-album').html(items.length)
+                $('#num-album').html(element.childElementCount)
+                filterSelection("all")
             }
         });
 
@@ -120,6 +125,58 @@
             '</div>'
             ));
         };
+    </script>
+
+    <!-- Filter Content -->
+    <script>
+        function filterSelection(c) {
+            var x, i;
+            x = document.getElementsByClassName("gallery-item");
+            console.log(x)
+            if (c == "all") c = "";
+            // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+            for (i = 0; i < x.length; i++) {
+                w3RemoveClass(x[i], "show");
+                if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+            }
+        }
+
+        // Show filtered elements
+        function w3AddClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) == -1) {
+                element.className += " " + arr2[i];
+                }
+            }
+        }
+
+        // Hide elements that are not selected
+        function w3RemoveClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                while (arr1.indexOf(arr2[i]) > -1) {
+                arr1.splice(arr1.indexOf(arr2[i]), 1);
+                }
+            }
+            element.className = arr1.join(" ");
+        }
+
+        // Add active class to the current control button (highlight it)
+        var btnContainer = document.getElementById("buttonContainer");
+        var btns = btnContainer.getElementsByClassName("gallery-filter");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function() {
+                var current = document.getElementsByClassName("gallery-filter-active");
+                current[0].className = current[0].className.replace(" gallery-filter-active", "");
+                this.className += " gallery-filter-active";
+            });
+        }
+    
     </script>
 </body>
 

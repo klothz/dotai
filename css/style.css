@@ -1744,6 +1744,7 @@ blockquote p {
 	position: relative;
 	float: left;
 	overflow: hidden;
+	display: none;
 }
 .gallery-item-second,
 .grid-sizer-second {
@@ -3980,4 +3981,8 @@ section {
 	background-position: center;
 	background-repeat: repeat;
 	background-origin: content-box;
+}
+
+.show {
+	display: block;
 }
