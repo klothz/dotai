@@ -56,12 +56,11 @@
                         <a href="#" class="gallery-filter" data-filter=".misc">Misc</a>
                     </div>
                     <div class="count-folio round-counter">
-                        <div class="num-album"></div>
-                        <div class="all-album"></div>
+                        <div id="all-album"></div>
                     </div>
                 </div>
                 <!--bottom-filter-wrap end-->
-                <div class="ff_panel-conainer fl-wrap">
+                <div class="ff_panel-conainer fl-wrap" id="counters">
                     <!-- portfolio start -->
                     <div class="gallery-items min-pad   four-column fl-wrap lightgallery">
                         <!-- gallery-item-->
@@ -95,12 +94,14 @@
 
     <script>
         var items = []
+        var element = document.getElementById("items");
         $.ajax({
             url: "https://0isykk2a2g.execute-api.us-east-1.amazonaws.com/Prod/getitem",
             method: 'GET',
             success: function (json) {
                 items = json;
                 items.forEach(appendItemHTML);
+                $('#all-album').html(element.childElementCount)
             }
         });
 
@@ -111,14 +112,13 @@
                         '<div class="grid-item-holder hov_zoom">' +
                             '<img src="' + item.s3_image + '" alt="">' +
                             '<a href="images/folio/1.jpg" class="box-media-zoom popup-image"><i class="fal fa-search"></i></a>' +
-                            '<div class="thumb-info">' +
-                                '<h3><a href="portfolio-single.html">' + item.itemName + '</a></h3>' +
-                                '<p>PRICE: ' + item.price + '</p>' +
-                            '</div>' +
-                        '</div>' +
-                    '</div>'
-                )
-            );
+                    '<div class="thumb-info">' +
+                        '<h3><a href="portfolio-single.html">' + item.itemName + '</a></h3>' +
+                        '<p>PRICE: ' + item.price + '</p>' +
+                    '</div>' +
+                '</div>' +
+            '</div>'
+            ));
         };
     </script>
 </body>
