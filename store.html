@@ -98,16 +98,27 @@
         $.ajax({
             url: "https://0isykk2a2g.execute-api.us-east-1.amazonaws.com/Prod/getitem",
             method: 'GET',
-            dataType : 'jsonp',
-            headers: {"Access-Control-Allow-Origin": "*"},
-            success: function (result) {
-                console.log(result)
-                appendItemHTML();
+            success: function (json) {
+                items = json;
+                items.forEach(appendItemHTML)
             }
         });
 
-        function appendItemHTML() {
-            console.log(items)
+        function appendItemHTML(item) {
+            $("#items").append(
+                $.parseHTML(
+                    '<div class="gallery-item nature">' +
+                        '<div class="grid-item-holder hov_zoom">' +
+                            '<img src="images/folio/1.jpg" alt="">' +
+                            '<a href="images/folio/1.jpg" class="box-media-zoom popup-image"><i class="fal fa-search"></i></a>' +
+                            '<div class="thumb-info">' +
+                                '<h3><a href="portfolio-single.html">' + item.itemName + '</a></h3>' +
+                                '<p>PRICE: ' + item.price + '</p>' +
+                            '</div>' +
+                        '</div>' +
+                    '</div>'
+                )
+            );
         };
     </script>
 </body>
