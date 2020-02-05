@@ -97,6 +97,11 @@
                         '<div class="fixed-column-dec"></div>' +
                     '</div>'
                 ));
+        var a = $(".bg");
+        a.each(function(a) {
+         if ($(this).attr("data-bg")) $(this).css("background-image", "url(" + $(this).data("bg") + ")");
+
+        });
         };
 
         function appendInfoBox(item){
