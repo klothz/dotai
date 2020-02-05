@@ -79,9 +79,10 @@
 
         var items = []
         var element = document.getElementById("items");
-        const url = window.location.url
+        var url = document.URL
+        var id = url.split("=")[1]
         $.ajax({
-            url: "https://0isykk2a2g.execute-api.us-east-1.amazonaws.com/Prod/getitem/" + "1",
+            url: "https://0isykk2a2g.execute-api.us-east-1.amazonaws.com/Prod/getitem/" + id,
             method: 'GET',
             success: function (json) {
                 appendInfoBox(json);
