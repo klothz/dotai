@@ -40,55 +40,11 @@
             <!-- content -->
             <div class="content">
                 <!-- column-image  -->
-                <div class="column-image">
-                    <div class="bg-anim"><span></span></div>
-                    <div class="bg" data-bg="images/bg/1.jpg"></div>
-                    <div class="overlay"></div>
-                    <div class="column-title content-animvisible">
-                        <h2>Switzerland Nature</h2>
-                        <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in pulvinar neque. Nulla
-                            finibus lobortis pulvinar.</h3>
-                    </div>
-                    <div class="fixed-column-dec"></div>
-                </div>
+                <div id="columnImage"></div>
                 <!-- column-image end  -->
                 <!-- column-wrapper -->
                 <div class="column-wrapper single-content-section">
-                    <section>
-                        <div class="container small-container">
-                            <!-- post -->
-                            <div class="post fl-wrap fw-post single-post ">
-                                <div class="section-title fl-wrap content-animvisible">
-                                    <h3>Project Gallery</h3>
-                                    <div class="section-number">01.</div>
-                                </div>
-                                <div class="pr-det-container  ">
-                                    <div class="caption-wrap fl-wrap  ">
-                                        <ul>
-                                            <li>
-                                                <span>PRICE</span>
-                                                <a href="#">NY , USA</a>
-                                            </li>
-                                            <li>
-                                                <span>Category</span>
-                                                <a href="#">Travel</a>
-                                            </li>
-                                            <li>
-                                                <span>Sizes</span>
-                                                <a href="#">Austin Onishe</a>
-                                            </li>
-                                            <li>
-                                                <span>PATCH_TYPE</span>
-                                                <a href="#">Canon 6d</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <a href="#" class="btn fl-btn  " target="_blank">ADD TO CART</a>
-                                </div>
-                            </div>
-                            <!-- post end-->
-                        </div>
-                    </section>
+                    <section id="infoBox"></section>
                     <footer class="min-footer fl-wrap content-animvisible">
                         <div class="container small-container">
                             <div class="footer-inner fl-wrap">
@@ -117,6 +73,74 @@
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/plugins.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
+
+    <script>
+
+        var items = []
+        var element = document.getElementById("items");
+        const url = window.location.url
+        $.ajax({
+            url: "https://0isykk2a2g.execute-api.us-east-1.amazonaws.com/Prod/getitem/" + "1",
+            method: 'GET',
+            success: function (json) {
+                appendInfoBox(json);
+                appendImageHTML(json);
+            }
+        });
+
+        function appendImageHTML(item) {
+            $("#columnImage").append(
+                $.parseHTML(
+                    '<div class="column-image">' +
+                        '<div class="bg-anim"><span></span></div>' +
+                        '<div class="bg" data-bg="' + item.s3Image + '"></div>' +
+                        '<div class="fixed-column-dec"></div>' +
+                    '</div>'
+                ));
+        };
+
+        function appendInfoBox(item){
+            $("#infoBox").append(
+                $.parseHTML(
+                    '<section>' +
+                        '<div class="container small-container">' +
+                            '<div class="post fl-wrap fw-post single-post ">' +
+                                '<div class="section-title fl-wrap content-animvisible">' +
+                                    '<h3>' + item.itemName +'</h3>' +
+                                '</div>' +
+                                '<div class="pr-det-container  ">' +
+                                    '<div class="caption-wrap fl-wrap  ">' +
+                                        '<ul>' +
+                                            '<li>' +
+                                                '<span>PRICE</span>' +
+                                                '<p>$'+ item.price + '</p>' +
+                                            '</li>' +
+                                            '<li>' +
+                                                '<span>Category</span>' +
+                                                '<p>' + item.type.toUpperCase() + '</p>' +
+                                            '</li>' +
+                                            '<li>' +
+                                                '<span>Sizes</span>' +
+                                                '<p>' + + '</p>' +
+                                            '</li>' +
+                                            '<li>' +
+                                                '<span>PATCH_TYPE</span>' +
+                                                '<p>' +  item.patchType.toUpperCase() + '</p>' +
+                                            '</li>' +
+                                        '</ul>' +
+                                    '</div>' +
+                                    '<a href="#" class="btn fl-btn  " target="_blank">ADD TO CART</a>' +
+                                '</div>' +
+                            '</div>' +
+                        '</div>' +
+                    '</section>' 
+                ));
+        }
+    </script>
+
+
+
+    </script>
 </body>
 
 </html>
