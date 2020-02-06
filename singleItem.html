@@ -91,6 +91,7 @@
 
         var sizeChosen = ""
         function pickSize(size){
+            $(".sizeButtons").css('color', '#999')
             sizeChosen = size.innerHTML;
             let id = event.srcElement.id
             $("#" + id).css('color', 'white');
@@ -102,7 +103,7 @@
             var stock = item.stock
             for(let i = 0; i < stock.length; i++){
                 let key = Object.keys(stock[i])[0] 
-                sizesHTML += " " + '<a id ="'+ key + '"onclick="pickSize(' + key + ')">' + key + '</a>'
+                sizesHTML += " " + '<a class="sizeButtons" id ="'+ key + '"onclick="pickSize(' + key + ')">' + key + '</a>'
             }   
         }
 
