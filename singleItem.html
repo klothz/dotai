@@ -4,7 +4,7 @@
 <head>
     <!--=============== basic  ===============-->
     <meta charset="UTF-8">
-    <title>Kotlis Photography - Creative Responsive Photography Template</title>
+    <title id="topTitle"></title>
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="robots" content="index, follow" />
@@ -83,6 +83,7 @@
             url: "https://0isykk2a2g.execute-api.us-east-1.amazonaws.com/Prod/getitem/" + id,
             method: 'GET',
             success: function (json) {
+                $("#topTitle").html(json.itemName)
                 appendImageHTML(json);
                 generateSizes(json)
                 appendInfoBox(json);
