@@ -89,13 +89,20 @@
             }
         });
 
+        var sizeChosen = ""
+        function pickSize(size){
+            sizeChosen = size.innerHTML;
+            let id = event.srcElement.id
+            $("#" + id).css('color', 'white');
+        }
+
         var sizesHTML = ""
         function generateSizes(item){
             // Create HTML Elements for the buttons based on the stock list
             var stock = item.stock
             for(let i = 0; i < stock.length; i++){
                 let key = Object.keys(stock[i])[0] 
-                sizesHTML += " " + '<a onclick="selectSize(\"'+ key +'\")">' + key + '</a>'
+                sizesHTML += " " + '<a id ="'+ key + '"onclick="pickSize(' + key + ')">' + key + '</a>'
             }   
         }
 
