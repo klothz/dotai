@@ -76,8 +76,6 @@
     <script src="js/utils.js"></script>
 
     <script>
-
-        var items = []
         var element = document.getElementById("items");
         var url = document.URL
         var id = url.split("=")[1]
@@ -85,10 +83,21 @@
             url: "https://0isykk2a2g.execute-api.us-east-1.amazonaws.com/Prod/getitem/" + id,
             method: 'GET',
             success: function (json) {
-                appendInfoBox(json);
                 appendImageHTML(json);
+                generateSizes(json)
+                appendInfoBox(json);
             }
         });
+
+        var sizesHTML = ""
+        function generateSizes(item){
+            // Create HTML Elements for the buttons based on the stock list
+            var stock = item.stock
+            for(let i = 0; i < stock.length; i++){
+                let key = Object.keys(stock[i])[0] 
+                sizesHTML += " " + '<a onclick="selectSize(\"'+ key +'\")">' + key + '</a>'
+            }   
+        }
 
         function appendImageHTML(item) {
             $("#columnImage").append(
@@ -102,7 +111,6 @@
         var a = $(".bg");
         a.each(function(a) {
          if ($(this).attr("data-bg")) $(this).css("background-image", "url(" + $(this).data("bg") + ")");
-
         });
         };
 
@@ -128,7 +136,7 @@
                                             '</li>' +
                                             '<li>' +
                                                 '<span>Sizes</span>' +
-                                                '<p>' + + '</p>' +
+                                                sizesHTML +
                                             '</li>' +
                                             '<li>' +
                                                 '<span>PATCH_TYPE</span>' +

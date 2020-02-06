@@ -2072,11 +2072,11 @@ blockquote p {
     font-weight: 700;
 	font-size:12px;
 	color:#999;
-	text-decoration:underline;
+	text-decoration:none;
 }
 .caption-wrap ul li a:hover {
-	color:#666;
-	text-decoration:none;
+	color:#ffff;
+	text-decoration:underline;
 }
 .caption-wrap ul li span   {
     color: #000;
@@ -3986,3 +3986,4 @@ section {
 .show {
 	display: block;
 }
+
