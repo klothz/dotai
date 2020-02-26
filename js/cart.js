@@ -5,7 +5,7 @@ function addItem(itemString) {
     // Check if the item is already in the database if so just ++ the value.
     if (sessionStorage.getItem(itemString) != null) {
         let itemCount = sessionStorage.getItem(itemString);
-        sessionStorage.setItem(itemString, itemCount + 1);
+        sessionStorage.setItem(itemString, parseInt(itemCount) + 1);
     }
     else {
         // Save the item to the database with value 1.
