@@ -73,12 +73,14 @@
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/plugins.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
+    <script src="js/cart.js"></script>
     <script src="js/utils.js"></script>
 
     <script>
         var element = document.getElementById("items");
         var url = document.URL
         var id = url.split("=")[1]
+        var breakCharacter = "\xA9"
         $.ajax({
             url: "https://0isykk2a2g.execute-api.us-east-1.amazonaws.com/Prod/getitem/" + id,
             method: 'GET',
@@ -123,6 +125,11 @@
         });
         };
 
+        function addToCart(){
+            var itemID = id + breakCharacter + sizeChosen;
+            addItem(itemID);
+        }
+
         function appendInfoBox(item){
             $("#infoBox").append(
                 $.parseHTML(
@@ -153,7 +160,7 @@
                                             '</li>' +
                                         '</ul>' +
                                     '</div>' +
-                                    '<a href="#" class="btn fl-btn  " target="_blank">ADD TO CART</a>' +
+                                    '<a class="btn fl-btn" onclick="addToCart()">ADD TO CART</a>' +
                                 '</div>' +
                             '</div>' +
                         '</div>' +
