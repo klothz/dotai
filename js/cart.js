@@ -39,7 +39,10 @@ function clearCart() {
 function sumCartValues() {
     var sum = 0;
     for (var key of Object.keys(sessionStorage)) {
-        sum += parseInt(sessionStorage[key]) * 1
+        let count = sessionStorage[key].split(breakCharacter)[0]
+        let price = sessionStorage[key].split(breakCharacter)[1]
+        sum += (count * price)
     }
+    console.log("The total cart price is: $" + sum);
     return sum;
 }
