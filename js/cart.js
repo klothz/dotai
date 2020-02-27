@@ -2,8 +2,12 @@
 // identify items with sizes. 
 var breakCharacter = "\xA9"
 function addItem(itemString, price) {
+    // Check if any item is selected
+    if(itemString.split(breakCharacter)[1] == ""){
+        return;    
+    }
     // Check if the item is already in the database if so just ++ the value.
-    if (sessionStorage.getItem(itemString) != null) {
+    else if (sessionStorage.getItem(itemString) != null) {
         let currCount = sessionStorage.getItem(itemString).split(breakCharacter)[0];
         var objectVal = (parseInt(currCount) + 1) + breakCharacter + price;
         sessionStorage.setItem(itemString, objectVal);
