@@ -21,14 +21,19 @@ function modifyCount(itemString, amount) {
 }
 
 function deleteItem(itemString) {
-    return;
+    sessionStorage.deleteItem(itemString);
 }
 
 function clearCart() {
-    return;
+    sessionStorage.clear();
 }
 
 // Iterates through the session values and sums up the entire price.
+// TODO Think of a way to get the price of an item easily
 function sumCartValues() {
-    return;
+    var sum = 0;
+    for (var key of Object.keys(sessionStorage)){
+        sum += parseInt(sessionStorage[key]) * 1
+    }
+    return sum;
 }
