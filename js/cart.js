@@ -4,20 +4,14 @@ var breakCharacter = "\xA9"
 function addItem(itemString, price) {
     // Check if the item is already in the database if so just ++ the value.
     if (sessionStorage.getItem(itemString) != null) {
-        let currItemObject = sessionStorage.getItem(itemString);
-        var newItemObject = {
-            count: parseInt(currItemObject["price"]) + 1,
-            price: parseFloat(price)
-        }
-        sessionStorage.setItem(itemString, newItemObject);
+        let currCount = sessionStorage.getItem(itemString).split(breakCharacter)[0];
+        var objectVal = (parseInt(currCount) + 1) + breakCharacter + price;
+        sessionStorage.setItem(itemString, objectVal);
     }
     else {
         // Save the item to the database with value 1.
-        var itemObject = {
-            count: 1,
-            price: parseFloat(price)
-        }
-        sessionStorage.setItem(itemString, itemObject);
+        var objectVal = "1" + breakCharacter + price;
+        sessionStorage.setItem(itemString, objectVal);
     }
 
     console.log(sessionStorage)
