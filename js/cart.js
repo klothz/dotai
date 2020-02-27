@@ -1,15 +1,23 @@
 // Will be used to add items to the shopping cart currently I need to think about how to uniquely
 // identify items with sizes. 
 var breakCharacter = "\xA9"
-function addItem(itemString) {
+function addItem(itemString, price) {
     // Check if the item is already in the database if so just ++ the value.
     if (sessionStorage.getItem(itemString) != null) {
-        let itemCount = sessionStorage.getItem(itemString);
-        sessionStorage.setItem(itemString, parseInt(itemCount) + 1);
+        let currItemObject = sessionStorage.getItem(itemString);
+        var newItemObject = {
+            count: parseInt(currItemObject["price"]) + 1,
+            price: parseFloat(price)
+        }
+        sessionStorage.setItem(itemString, newItemObject);
     }
     else {
         // Save the item to the database with value 1.
-        sessionStorage.setItem(itemString, 1);
+        var itemObject = {
+            count: 1,
+            price: parseFloat(price)
+        }
+        sessionStorage.setItem(itemString, itemObject);
     }
 
     console.log(sessionStorage)
@@ -32,7 +40,7 @@ function clearCart() {
 // TODO Think of a way to get the price of an item easily
 function sumCartValues() {
     var sum = 0;
-    for (var key of Object.keys(sessionStorage)){
+    for (var key of Object.keys(sessionStorage)) {
         sum += parseInt(sessionStorage[key]) * 1
     }
     return sum;
