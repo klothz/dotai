@@ -77,6 +77,7 @@
     <script src="js/utils.js"></script>
     
     <script>
+        var price;
         var element = document.getElementById("items");
         var url = document.URL
         var id = url.split("=")[1]
@@ -87,6 +88,7 @@
             method: 'GET',
             success: function (json) {
                 $("#topTitle").html(json.itemName)
+                price = json.price;
                 appendImageHTML(json);
                 generateSizes(json)
                 appendInfoBox(json);
@@ -128,7 +130,7 @@
 
         function addToCart(){
             var itemID = id + breakCharacter + sizeChosen;
-            addItem(itemID, json.price);
+            addItem(itemID, price);
         }
 
         function appendInfoBox(item){
