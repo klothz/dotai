@@ -15,3 +15,11 @@ $(function () {
         zIndexStart: 8, // because of absolute position, set z-index base value
     });
 });
+
+(function () {
+
+    $("#navCart").on("click", function () {
+        $(".shopping-cart").fadeToggle("fast");
+    });
+
+})();
