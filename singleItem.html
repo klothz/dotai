@@ -50,7 +50,7 @@
                             <div class="footer-inner fl-wrap">
                                 <!-- policy-box-->
                                 <div class="policy-box">
-                                    <span>&#169; Kotlis 2019 / All rights reserved. </span>
+                                    <span>&#169; Kotlis 2020 / All rights reserved. </span>
                                 </div>
                                 <!-- policy-box end-->
                             </div>
@@ -79,6 +79,7 @@
     <script>
         var price;
         var element = document.getElementById("items");
+        var firstSize = "";
         var url = document.URL
         var id = url.split("=")[1]
         // TODO Figure out how to have a constant file that will be shared between this and cart.js
@@ -100,6 +101,10 @@
             $(".sizeButtons").css('color', '#999')
             sizeChosen = size.innerHTML;
             let id = event.srcElement.id
+            // Used when first loading a page to enable one button.
+            if (id == null){
+                id = size;
+            }
             $("#" + id).css('color', 'white');
         }
 
@@ -109,6 +114,9 @@
             var stock = item.stock
             for(let i = 0; i < stock.length; i++){
                 let key = Object.keys(stock[i])[0] 
+                if(i == 0){
+                    firstSize = key;
+                }
                 sizesHTML += " " + '<a class="sizeButtons" id ="'+ key + '"onclick="pickSize(' + key + ')">' + key + '</a>'
             }   
         }
@@ -170,6 +178,7 @@
                         '</div>' +
                     '</section>' 
                 ));
+                pickSize(firstSize);
         }
     </script>
 
