@@ -1,7 +1,4 @@
 $(function () {
-    $("#navigation").load("nav.html");
-});
-$(function () {
     $(".glitch-img").mgGlitch({
         destroy: false, // set 'true' to stop the plugin
         glitch: true, // set 'false' to stop glitching
