@@ -13,6 +13,18 @@ $(function () {
     });
 });
 
+// Console Printouts
+(function () {
+    let customLogo = `
+    _  _ _    ____ ___ _  _ ___  
+    |_/  |    |  |  |  |__|   /  
+    |\\_  |___ |__|  |  |  |  /__      
+    
+       Who do you know here?
+   `
+    console.log(customLogo)
+})();
+
 (function () {
 
     $("#navCart").on("click", function () {
