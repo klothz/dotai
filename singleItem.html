@@ -163,6 +163,10 @@
         });
         };
 
+        function addToNewsLetter(){
+            return;
+        }
+
         function addToCart(){
             var itemID = id + breakCharacter + sizeChosen;
             addItem(itemID, price);
@@ -170,6 +174,17 @@
         }
 
         function appendInfoBox(item){
+            soldOutHTML = '<a class="btn fl-btn" onclick="addToCart()">ADD TO CART</a>'
+            totalStock = 0;
+            for(let i = 0; i < item["stock"].length; i++){
+                let sizeObject = item["stock"][i]
+                totalStock += Object.values(sizeObject)[0]
+            }
+            
+            if (totalStock < 1){
+                soldOutHTML = '<a class="btn fl-btn" onclick="addToNewsLetter()">OUT OF STOCK</a>';
+            }
+
             $("#infoBox").append(
                 $.parseHTML(
                     '<section>' +
@@ -199,7 +214,7 @@
                                             '</li>' +
                                         '</ul>' +
                                     '</div>' +
-                                    '<a class="btn fl-btn" onclick="addToCart()">ADD TO CART</a>' +
+                                    soldOutHTML +
                                 '</div>' +
                             '</div>' +
                         '</div>' +
