@@ -141,10 +141,16 @@
             var stock = item.stock
             for(let i = 0; i < stock.length; i++){
                 let key = Object.keys(stock[i])[0] 
+                let sizeStock = Object.values(stock[i])[0] 
                 if(i == 0){
                     firstSize = key;
                 }
-                sizesHTML += " " + '<a class="sizeButtons" id ="'+ key + '"onclick="pickSize(' + key + ')">' + key + '</a>'
+                if(sizeStock == 0){
+                    sizesHTML += " " + '<a class="sizeButtons" id ="'+ key + '" style="color:red">' + key + '</a>'
+                }   
+                else{
+                    sizesHTML += " " + '<a class="sizeButtons" id ="'+ key + '"onclick="pickSize(' + key + ')">' + key + '</a>'
+                }  
             }   
         }
 
