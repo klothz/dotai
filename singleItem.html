@@ -105,8 +105,9 @@
     
     <script>
         var price;
+        var firstSize = ""
+        var outOfStockSizes = [];
         var element = document.getElementById("items");
-        var firstSize = "";
         var url = document.URL
         var id = url.split("=")[1]
         // TODO Figure out how to have a constant file that will be shared between this and cart.js
@@ -133,6 +134,10 @@
                 id = size;
             }
             $("#" + id).css('color', 'white');
+
+            for(let i = 0; i < outOfStockSizes.length; i++){
+                $("#" + outOfStockSizes[i]).css('color', 'rgb(161, 24, 24)')
+            }
         }
 
         var sizesHTML = ""
@@ -142,11 +147,14 @@
             for(let i = 0; i < stock.length; i++){
                 let key = Object.keys(stock[i])[0] 
                 let sizeStock = Object.values(stock[i])[0] 
+
                 if(i == 0){
                     firstSize = key;
                 }
+
                 if(sizeStock == 0){
-                    sizesHTML += " " + '<a class="sizeButtons" id ="'+ key + '" style="color:red">' + key + '</a>'
+                    outOfStockSizes.push(key);
+                    sizesHTML += " " + '<a class="sizeButtons" id ="'+ key + '">' + key + '</a>'
                 }   
                 else{
                     sizesHTML += " " + '<a class="sizeButtons" id ="'+ key + '"onclick="pickSize(' + key + ')">' + key + '</a>'
@@ -226,7 +234,7 @@
                         '</div>' +
                     '</section>' 
                 ));
-                pickSize(firstSize);
+            pickSize(firstSize)
         }
     </script>
 
