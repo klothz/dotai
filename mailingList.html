@@ -120,15 +120,6 @@
     <script src="js/utils.js"></script>
 
     <script>
-
-        function validFormHTML(){
-            return
-        }
-
-        function retryFormHTML(){
-            return;
-        }
-
         function addToMailingList() {
             var name = document.getElementById("name").value;;
             var email = document.getElementById("email").value;;
@@ -154,6 +145,59 @@
                 retryFormHTML();
             }
         }
+
+        
+        function validFormHTML(){
+            $("#sectionHTML").empty();
+            $("#sectionHTML").append(
+                $.parseHTML(
+                    '<div class="container small-container">' +
+                            '<div class="section-title fl-wrap">' +
+                                '<h3>You have joined our mailing list!</h3>' +
+                                '<h4>Be on the lookout for updates via email</h4>' +
+                            '</div>' +
+                            '<div class="column-wrapper_item fl-wrap">' +
+                                '<button class="btn" id="Home" href="index.html">Home' +
+                                '</button>' +
+                            '</div>' +
+                        '</div>'
+                )
+            );
+        }
+
+        // Code could prob be simpler to just change one line will test this and that
+        function retryFormHTML(){
+            $("#sectionHTML").empty();
+            $("#sectionHTML").append(
+                $.parseHTML(
+                    '<div class="container small-container">' +
+                            '<div class="section-title fl-wrap">' +
+                                '<h3>Invalid Entry Try Again</h3>' +
+                                '<h4>Get notifications to discount codes, new releases, and restock</h4>' +
+                            '</div>' +
+                            '<div class="column-wrapper_item fl-wrap">' +
+                                '<div class="column-wrapper_text fl-wrap">' +
+                                    '<div id="contact-form" class="fl-wrap">' +
+                                        '<div id="message"></div>' +
+                                        '<form class="custom-form" action="php/contact.php" name="contactform"' +
+                                            'id="contactform">' +
+                                            '<fieldset>' +
+                                                '<input type="text" name="name" id="name" placeholder="Your Name *"' +
+                                                    'value="" />' +
+                                                '<input type="text" name="email" id="email" placeholder="Email Address *"' +
+                                                    'value="" />' +
+                                                '<button class="btn float-btn flat-btn color-bg" id="submit" onclick="addToMailingList()">Submit' +
+                                                '</button>' +
+                                            '</fieldset>' +
+                                        '</form>' +
+                                    '</div>' +
+                                '</div>' +
+                            '</div>' +
+                        '</div>'
+                )
+            );
+        }
+
 
         (function (){
             $("#sectionHTML").append(
