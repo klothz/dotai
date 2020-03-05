@@ -97,7 +97,7 @@
                                                     value="" />
                                                 <input type="text" name="email" id="email" placeholder="Email Address *"
                                                     value="" />
-                                                <button class="btn float-btn flat-btn color-bg" id="submit">Submit
+                                                <button class="btn float-btn flat-btn color-bg" id="submit" onclick="addToMailingList()">Submit
                                                 </button>
                                             </fieldset>
                                         </form>
@@ -139,6 +139,24 @@
     <script type="text/javascript" src="js/plugins.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
     <script type="text/javascript" src="js/map.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/utils.js"></script>
+
+    <script>
+        function addToMailingList() {
+            var name = document.getElementById("name").value;;
+            var email = document.getElementById("email").value;;
+
+            var emailCheck = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            var nameCheck = /^[0-9A-Za-z\s\-]+$/
+            if (emailCheck.test(email) && nameCheck.test(name)) {
+                console.log("Push to Database");
+            }
+            else{
+                console.log("Entries are not valid");
+            }
+        }
+    </script>
 </body>
 
 </html>
