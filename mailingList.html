@@ -81,30 +81,7 @@
                 <!-- column-wrapper -->
                 <div class="column-wrapper ">
                     <section id="sec1">
-                        <div class="container small-container">
-                            <div class="section-title fl-wrap">
-                                <h3>Join Our Mailing List</h3>
-                                <h4>Get notifications to discount codes, new releases, and restock</h4>
-                            </div>
-                            <div class="column-wrapper_item fl-wrap">
-                                <div class="column-wrapper_text fl-wrap">
-                                    <div id="contact-form" class="fl-wrap">
-                                        <div id="message"></div>
-                                        <form class="custom-form" action="php/contact.php" name="contactform"
-                                            id="contactform">
-                                            <fieldset>
-                                                <input type="text" name="name" id="name" placeholder="Your Name *"
-                                                    value="" />
-                                                <input type="text" name="email" id="email" placeholder="Email Address *"
-                                                    value="" />
-                                                <button class="btn float-btn flat-btn color-bg" id="submit" onclick="addToMailingList()">Submit
-                                                </button>
-                                            </fieldset>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <div id="sectionHTML"></div>
                     </section>
                     <!--section end  -->
                     <!--footer -->
@@ -143,6 +120,15 @@
     <script src="js/utils.js"></script>
 
     <script>
+
+        function validFormHTML(){
+            return
+        }
+
+        function retryFormHTML(){
+            return;
+        }
+
         function addToMailingList() {
             var name = document.getElementById("name").value;;
             var email = document.getElementById("email").value;;
@@ -159,11 +145,46 @@
                     method: "POST",
                     data: JSON.stringify(bodyObject)
                 })
+
+                console.log("You have been added to the mailing list")
+                validFormHTML();
             }
             else{
                 console.log("Entries are not valid");
+                retryFormHTML();
             }
         }
+
+        (function (){
+            $("#sectionHTML").append(
+                $.parseHTML(
+                    '<div class="container small-container">' +
+                            '<div class="section-title fl-wrap">' +
+                                '<h3>Join Our Mailing List</h3>' +
+                                '<h4>Get notifications to discount codes, new releases, and restock</h4>' +
+                            '</div>' +
+                            '<div class="column-wrapper_item fl-wrap">' +
+                                '<div class="column-wrapper_text fl-wrap">' +
+                                    '<div id="contact-form" class="fl-wrap">' +
+                                        '<div id="message"></div>' +
+                                        '<form class="custom-form" action="php/contact.php" name="contactform"' +
+                                            'id="contactform">' +
+                                            '<fieldset>' +
+                                                '<input type="text" name="name" id="name" placeholder="Your Name *"' +
+                                                    'value="" />' +
+                                                '<input type="text" name="email" id="email" placeholder="Email Address *"' +
+                                                    'value="" />' +
+                                                '<button class="btn float-btn flat-btn color-bg" id="submit" onclick="addToMailingList()">Submit' +
+                                                '</button>' +
+                                            '</fieldset>' +
+                                        '</form>' +
+                                    '</div>' +
+                                '</div>' +
+                            '</div>' +
+                        '</div>'
+                )
+            )
+        })();
     </script>
 </body>
 
