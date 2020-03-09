@@ -105,8 +105,11 @@
 
     <script type="text/javascript">
         /*<![CDATA[*/
-        function shopifyMain() {
+        function shopifyMain(shopifyID, shopifyComponent) {
             var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+            var shopifyID = shopifyID;
+            var shopifyComponent = shopifyComponent
+            
             if (window.ShopifyBuy) {
                 if (window.ShopifyBuy.UI) {
                 ShopifyBuyInit();
@@ -130,8 +133,8 @@
                 });
                 ShopifyBuy.UI.onReady(client).then(function (ui) {
                 ui.createComponent('product', {
-                    id: '4624853762187',
-                    node: document.getElementById('product-component-1583530868354'),
+                    id: shopifyID,
+                    node: document.getElementById('product-component-' + shopifyComponent),
                     moneyFormat: '%24%7B%7Bamount%7D%7D',
                     options: {
             "product": {
@@ -262,7 +265,7 @@
                 appendImageHTML(json);
                 generateSizes(json)
                 appendInfoBox(json);
-                shopifyMain();
+                shopifyMain(json.shopifyId, json.shopifyElement);
             }
         });
 
