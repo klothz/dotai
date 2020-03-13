@@ -286,19 +286,7 @@
             var stock = item.stock
             for(let i = 0; i < stock.length; i++){
                 let key = Object.keys(stock[i])[0] 
-                let sizeStock = Object.values(stock[i])[0] 
-
-                if(i == 0){
-                    firstSize = key;
-                }
-
-                if(sizeStock == 0){
-                    outOfStockSizes.push(key);
-                    sizesHTML += " " + '<a class="sizeButtons" id ="'+ key + '">' + key + '</a>'
-                }   
-                else{
-                    sizesHTML += " " + '<a class="sizeButtons" id ="'+ key + '"onclick="pickSize(' + key + ')">' + key + '</a>'
-                }  
+                sizesHTML += " " + '<a class="sizeButtons" id ="'+ key + '"onclick="pickSize(' + key + ')">' + key + '</a>'
             }   
         }
 
@@ -325,15 +313,9 @@
 
         function appendInfoBox(item){
             soldOutHTML = '<div id="product-component-1583530868354"></div>'
-            totalStock = 0;
             for(let i = 0; i < item["stock"].length; i++){
                 let sizeObject = item["stock"][i]
-                totalStock += Object.values(sizeObject)[0]
             }
-            
-            // if (totalStock < 1){
-            //     soldOutHTML = '<a href = "mailingList.html" class="btn soldOut-btn">OUT OF STOCK</a>';
-            // }
 
             $("#infoBox").append(
                 $.parseHTML(
