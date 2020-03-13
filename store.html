@@ -141,7 +141,41 @@
                 storefrontAccessToken: 'ff00c2ad865128165184b6bb58de432e',
                 });
                 ShopifyBuy.UI.onReady(client).then(function (ui) {
-                    ui.createCart({})
+                    ui.createCart({
+                        options: {
+                            "cart": {
+                            "styles": {
+                            "button": {
+                                ":hover": {
+                                "background-color": "#000000"
+                                },
+                                "background-color": "#000000",
+                                ":focus": {
+                                "background-color": "#000000"
+                                },
+                                "border-radius": "0px"
+                            }
+                            },
+                            "text": {
+                            "total": "Subtotal",
+                            "button": "Checkout"
+                            }
+                        },
+                        "toggle": {
+                            "styles": {
+                            "toggle": {
+                                "background-color": "#000000",
+                                ":hover": {
+                                "background-color": "#000000"
+                                },
+                                ":focus": {
+                                "background-color": "#000000"
+                                }
+                            }
+                            }
+                        }
+                        }
+                    })
                 });
             }
         })();
