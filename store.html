@@ -200,15 +200,9 @@
         });
 
         function appendItemHTML(item) {
-            soldOutHTML = ''
-            totalStock = 0;
             for(let i = 0; i < item["stock"].length; i++){
                 let sizeObject = item["stock"][i]
                 totalStock += Object.values(sizeObject)[0]
-            }
-            
-            if (totalStock < 1){
-                soldOutHTML = '<p style="color:red">SOLD OUT</p>';
             }
 
             $("#items").append(
@@ -220,7 +214,6 @@
                     '<div class="thumb-info">' +
                         '<h3><a href="singleItem.html?itemID='+ item.itemID + '">' + item.itemName + '</a></h3>' +
                         '<p>PRICE: ' + item.price + '</p>' + 
-                        soldOutHTML +
                     '</div>' +
                 '</div>' +
             '</div>'
