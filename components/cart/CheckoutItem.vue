@@ -14,15 +14,6 @@
         <!-- Start Checkout Area -->
 		<section class="checkout-area ptb-60">
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 col-md-12">
-                        <div class="user-actions">
-                            <i class="fas fa-sign-in-alt"></i>
-                            <span>Returning customer? <nuxt-link to="/login">Click here to login</nuxt-link></span>
-                        </div>
-                    </div>
-                </div>
-
                 <form>
                     <div class="row">
                         <div class="col-lg-6 col-md-12">
@@ -126,18 +117,16 @@
 
                                 <div class="payment-method">
                                     <p>
-                                        <input type="radio" id="direct-bank-transfer" name="radio-group" checked>
-                                        <label for="direct-bank-transfer">Direct Bank Transfer</label>
-
-                                        Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order will not be shipped until the funds have cleared in our account.
+                                        <input type="radio" id="bitcoin" name="radio-group" checked>
+                                        <label for="bitcoin">Bitcoin</label>
                                     </p>
                                     <p>
                                         <input type="radio" id="paypal" name="radio-group">
                                         <label for="paypal">PayPal</label>
                                     </p>
-                                    <p>
-                                        <input type="radio" id="cash-on-delivery" name="radio-group">
-                                        <label for="cash-on-delivery">Cash on Delivery</label>
+                                   <p>
+                                        <input type="radio" id="card" name="radio-group">
+                                        <label for="card">Debit/Credit</label>
                                     </p>
                                 </div>
 

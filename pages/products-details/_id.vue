@@ -23,7 +23,6 @@
                         :image = "product.image"
                     />
                     <DetailsInfo />
-                    <RelatedProducts :id = "product.id" />
                 </div>
             </div>
         </section>
@@ -36,10 +35,9 @@
 import ProductImages from '../../components/products/ProductImages';
 import Details from '../../components/products/Details';
 import DetailsInfo from '../../components/products/DetailsInfo';
-import RelatedProducts from '../../components/products/RelatedProducts';
 export default {
     components: {
-        ProductImages, Details, DetailsInfo, RelatedProducts
+        ProductImages, Details, DetailsInfo
     },
     data(){
         return {

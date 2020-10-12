@@ -1,5 +1,5 @@
 <template>
-    <div class="col-lg-6 col-md-6">
+    <div class="col-lg-4 col-md-6">
         <div class="product-details-content">
             <h3>{{name}}</h3>
 
@@ -8,32 +8,18 @@
             </div>
 
             <ul class="product-info">
-                <li><span>Vendor:</span> <a href="#">Lereve</a></li>
                 <li><span>Availability:</span> <a href="#">In stock (7 items)</a></li>
                 <li><span>Product Type:</span> <a href="#">T-Shirt</a></li>
             </ul>
-
-            <div class="product-color-switch">
-                <h4>Color:</h4>
-
-                <ul>
-                    <li><a href="#" title="Black" class="color-black"></a></li>
-                    <li><a href="#" title="White" class="color-white"></a></li>
-                    <li class="active"><a href="#" title="Green" class="color-green"></a></li>
-                    <li><a href="#" title="Yellow Green" class="color-yellowgreen"></a></li>
-                    <li><a href="#" title="Teal" class="color-teal"></a></li>
-                </ul>
-            </div>
 
             <div class="product-size-wrapper">
                 <h4>Size:</h4>
 
                 <ul>
                     <li><a href="#">XS</a></li>
-                    <li class="active"><a href="#">S</a></li>
+                    <li><a href="#">S</a></li>
                     <li><a href="#">M</a></li>
                     <li><a href="#">XL</a></li>
-                    <li><a href="#">XXL</a></li>
                 </ul>
             </div>
 
@@ -51,29 +37,6 @@
                 <button v-else type="submit" class="btn btn-primary" @click="addToCart()">
                     <i class="fas fa-cart-plus"></i> Add to Cart
                 </button>
-            </div>
-
-            <div class="wishlist-compare-btn">
-                <a href="#" class="btn btn-light"><i class="far fa-heart"></i> Add to Wishlist</a>
-                <a href="#" class="btn btn-light"><i class="fas fa-balance-scale"></i> Add to Compare</a>
-            </div>
-
-            <div class="buy-checkbox-btn">
-                <div class="item">
-                    <input class="inp-cbx" id="cbx" type="checkbox">
-                    <label class="cbx" for="cbx">
-                        <span>
-                            <svg width="12px" height="10px" viewbox="0 0 12 10">
-                                <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
-                            </svg>
-                        </span>
-                        <span>I agree with the terms and conditions</span>
-                    </label>
-                </div>
-
-                <div class="item">
-                    <a href="#" class="btn btn-primary">Buy it now!</a>
-                </div>
             </div>
         </div>
     </div>

@@ -19,24 +19,6 @@
                             <i class="far fa-eye"></i>
                         </a>
                     </li>
-                    <li>
-                        <a 
-                            href="#"
-                            title="Add to Wishlist"
-                            v-b-tooltip.hover
-                        >
-                            <i class="far fa-heart"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a 
-                            href="#"
-                            title="Add to Compare"
-                            v-b-tooltip.hover
-                        >
-                            <i class="fas fa-sync"></i>
-                        </a>
-                    </li>
                 </ul>
                 
                 <Timer v-if="product.timePeriod" v-bind:dateTime="product.dateTime"></Timer>

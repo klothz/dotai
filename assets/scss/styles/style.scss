@@ -6697,14 +6697,15 @@ Products Details Area CSS
 }
 .product-details-content {
     h3 {
+        color: $neon-blue;
         font-size: 22px;
         margin-bottom: 8px;
 
         a {
-            color: $black-color;
+            color: $white-color;
 
             &:hover {
-                color: $black-color;
+                color: $neon-blue;
             }
         }
     }
@@ -6717,7 +6718,7 @@ Products Details Area CSS
         span {
             display: inline-block;
             font-size: 18px;
-            color: $black-color;
+            color: $white-color;
         }
     }
     .product-review {
@@ -6759,10 +6760,10 @@ Products Details Area CSS
             a {
                 display: inline-block;
                 font-weight: 500;
-                color: $black-color;
+                color: $white-color;
 
                 &:hover {
-                    color: $black-color;
+                    color: $neon-blue;
                 }
             }
         }
@@ -6806,7 +6807,7 @@ Products Details Area CSS
                 a {
                     display: inline-block;
                     position: relative;
-                    border: 1px solid transparent;
+                    border: 1px white;
                     width: 25px;
                     height: 25px;
                     border-radius: 50%;
@@ -6937,14 +6938,14 @@ Products Details Area CSS
                     text-align: center;
 
                     &:hover, &:focus {
-                        border-color: $black-color;
-                        color: $black-color;
+                        border-color: $neon-blue;
+                        color: $white-color;
                     }
                 }
                 &.active {
                     a {
-                        border-color: $black-color;
-                        color: $black-color;
+                        border-color: $neon-blue;
+                        color: $white-color;
                     }
                 }
             }
@@ -6962,6 +6963,7 @@ Products Details Area CSS
             padding-top: 11px;
             padding-bottom: 10px;
             top: -1px;
+            color: $white-color;    
 
             span {
                 position: absolute;
@@ -7188,7 +7190,7 @@ Products Details Area CSS
                 position: relative;
                 padding-left: 18px;
                 text-transform: uppercase;
-                color: $paragraph-color;
+                color: $neon-blue;
         
                 .dot {
                     position: absolute;
@@ -7243,6 +7245,7 @@ Products Details Area CSS
             .products-details-tab-content {
                 p {
                     margin-bottom: 20px;
+                    color: #999999;
                 }
                 ul, ol {
                     padding-left: 0;
@@ -7253,7 +7256,7 @@ Products Details Area CSS
                         margin-bottom: 10px;
                         position: relative;
                         padding-left: 12px;
-                        color: $paragraph-color;
+                        color: #999999;
 
                         &::before {
                             content: '';
@@ -8298,6 +8301,7 @@ Checkout CSS
         font: {
             size: 18px;
         }
+        color: $neon-blue;
         margin-bottom: 25px;
     }
 }
@@ -8305,7 +8309,7 @@ Checkout CSS
     .form-group {
         label {
             display: block;
-            color: $black-color;
+            color: $white-color;
             margin-bottom: 8px;
             font: {
                 size: 14px;
@@ -8339,10 +8343,11 @@ Checkout CSS
         }
         .form-control {
             background: transparent;
+            color: $white-color;
             border: 1px solid #eeeeee;
 
             &:focus {
-                border-color: $black-color;
+                border-color: $neon-blue
             }
         }
         textarea {
@@ -8353,7 +8358,7 @@ Checkout CSS
         margin-bottom: 15px;
 
         .form-check-label {
-            color: $paragraph-color;
+            color: $white-color
         }
         label {
             font: {
@@ -8375,6 +8380,7 @@ Checkout CSS
                         border-bottom-width: 0;
                         vertical-align: middle;
                         border-color: #eaedff;
+                        color: $neon-blue;
                         text-transform: uppercase;
                         padding: 15px .75rem;
                         font: {
@@ -8388,25 +8394,25 @@ Checkout CSS
                 tr {
                     td {
                         vertical-align: middle;
-                        color: $paragraph-color;
+                        color: $white-color;
                         border-color: #eaedff;
                         font-size: 14px;
     
                         &.product-name {
                             a {
-                                color: $paragraph-color;
+                                color: $white-color;
                                 display: inline-block;
                                 font: {
                                     size: 15px;
                                 }
                                 &:hover {
-                                    color: $black-color;
+                                    color: $neon-blue;
                                 }
                             }
                         }
                         &.order-subtotal, &.order-shipping , &.total-price {
                             span {
-                                color: $black-color;
+                                color: #a7a0a0;
                                 font-weight: 600;
                             }
                         }
@@ -8424,6 +8430,7 @@ Checkout CSS
             font: {
                 size: 14px;
             }
+            color: $white-color;
             [type="radio"] {
                 &:checked, &:not(:checked) {
                     display: none;
@@ -8438,7 +8445,7 @@ Checkout CSS
                         font: {
                             weight: 600;
                         }
-                        color: $black-color;
+                        color: $white-color;
                         position: relative;
                         margin-bottom: 8px;
 
