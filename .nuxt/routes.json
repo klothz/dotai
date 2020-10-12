@@ -1,0 +1,86 @@
+[
+  {
+    "name": "admin",
+    "path": "/admin",
+    "component": "C:\\\\Users\\\\Dan\\\\Documents\\\\GitHub\\\\dotai\\\\pages\\\\admin.vue",
+    "chunkName": "pages/admin",
+    "_name": "_c879df62"
+  },
+  {
+    "name": "blog-details",
+    "path": "/blog-details",
+    "component": "C:\\\\Users\\\\Dan\\\\Documents\\\\GitHub\\\\dotai\\\\pages\\\\blog-details.vue",
+    "chunkName": "pages/blog-details",
+    "_name": "_63e88347"
+  },
+  {
+    "name": "blog-one",
+    "path": "/blog-one",
+    "component": "C:\\\\Users\\\\Dan\\\\Documents\\\\GitHub\\\\dotai\\\\pages\\\\blog-one.vue",
+    "chunkName": "pages/blog-one",
+    "_name": "_c15d682a"
+  },
+  {
+    "name": "cart",
+    "path": "/cart",
+    "component": "C:\\\\Users\\\\Dan\\\\Documents\\\\GitHub\\\\dotai\\\\pages\\\\cart.vue",
+    "chunkName": "pages/cart",
+    "_name": "_3f1d26d0"
+  },
+  {
+    "name": "checkout",
+    "path": "/checkout",
+    "component": "C:\\\\Users\\\\Dan\\\\Documents\\\\GitHub\\\\dotai\\\\pages\\\\checkout.vue",
+    "chunkName": "pages/checkout",
+    "_name": "_a663ac14"
+  },
+  {
+    "name": "contact",
+    "path": "/contact",
+    "component": "C:\\\\Users\\\\Dan\\\\Documents\\\\GitHub\\\\dotai\\\\pages\\\\contact.vue",
+    "chunkName": "pages/contact",
+    "_name": "_15a686a0"
+  },
+  {
+    "name": "gallery-one",
+    "path": "/gallery-one",
+    "component": "C:\\\\Users\\\\Dan\\\\Documents\\\\GitHub\\\\dotai\\\\pages\\\\gallery-one.vue",
+    "chunkName": "pages/gallery-one",
+    "_name": "_5cab9b2a"
+  },
+  {
+    "name": "login",
+    "path": "/login",
+    "component": "C:\\\\Users\\\\Dan\\\\Documents\\\\GitHub\\\\dotai\\\\pages\\\\login.vue",
+    "chunkName": "pages/login",
+    "_name": "_33fb5f69"
+  },
+  {
+    "name": "products",
+    "path": "/products",
+    "component": "C:\\\\Users\\\\Dan\\\\Documents\\\\GitHub\\\\dotai\\\\pages\\\\products.vue",
+    "chunkName": "pages/products",
+    "_name": "_d9b921d8"
+  },
+  {
+    "name": "signup",
+    "path": "/signup",
+    "component": "C:\\\\Users\\\\Dan\\\\Documents\\\\GitHub\\\\dotai\\\\pages\\\\signup.vue",
+    "chunkName": "pages/signup",
+    "_name": "_d06b0a70"
+  },
+  {
+    "name": "products-details-id",
+    "path": "/products-details/:id?",
+    "component": "C:\\\\Users\\\\Dan\\\\Documents\\\\GitHub\\\\dotai\\\\pages\\\\products-details\\\\_id.vue",
+    "chunkName": "pages/products-details/_id",
+    "_name": "_2b8da701"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "C:\\\\Users\\\\Dan\\\\Documents\\\\GitHub\\\\dotai\\\\pages\\\\index.vue",
+    "chunkName": "pages/index",
+    "_name": "_6a53bc52"
+  }
+]
