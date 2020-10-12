@@ -109,6 +109,7 @@ a {
     }
 }
 .ptb-60 {
+    background-color: $dark-color;
     padding: {
         top: 60px;
         bottom: 60px;
@@ -189,7 +190,7 @@ img {
 .btn-primary {
     color: $white-color;
     background-color: $black-color;
-    border-color: $black-color;
+    border-color: $white-color;
 
     &.disabled, &:disabled {
         color: $white-color;
@@ -208,14 +209,14 @@ img {
     &:hover, &:focus {
         box-shadow: unset;
         background-color: transparent;
-        color: $black-color;
-        border-color: $black-color;
+        color: $neon-blue;
+        border-color: $neon-blue;
     }
 }
 .btn-light {
     background-color: transparent;
-    color: $black-color;
-    border-color: $black-color;
+    color: $white-color;
+    border-color: $white-color;
 
     &.disabled, &:disabled {
         background-color: transparent;
@@ -235,7 +236,7 @@ img {
         box-shadow: unset;
         color: $white-color;
         background-color: $black-color;
-        border-color: $black-color;
+        border-color: $neon-blue
     }
 }
 /*owl-carousel-btn*/
@@ -5090,7 +5091,7 @@ Instagram Area CSS
 Page Title Area CSS
 =================================================*/
 .page-title-area {
-    background-color: #f8f8f8;
+    background-color: $dark-color;
     padding: {
         top: 12px;
         bottom: 12px;
@@ -5108,11 +5109,11 @@ Page Title Area CSS
             font-size: 13px;
 
             a {
-                color: $paragraph-color;
+                color: $white-color;
                 font-size: 13px;
 
                 &:hover, &:focus {
-                    color: $black-color;
+                    color: $neon-blue
                 }
             }
             &::before {
@@ -5139,7 +5140,7 @@ Products Collections Area CSS
 =================================================*/
 .products-collections-area {
     padding-bottom: 30px;
-    
+    background-color: $dark-color;
     .container-fluid {
         width: 90%;
     }
@@ -5289,13 +5290,13 @@ Products Collections Area CSS
     margin-bottom: 30px;
 
     span {
-        color: $black-color;
+        color: #666666;
         display: inline-block;
         padding-right: 5px;
 
         a {
             text-transform: uppercase;
-            color: $black-color;
+            color: $white-color;
             font-weight: 700;
             margin-right: 20px;
 
@@ -5328,7 +5329,7 @@ Products Collections Area CSS
                 }
                 &.active, &:hover {
                     span {
-                        border-color: $black-color;
+                        border-color: $white-color
                     }
                 }
             }
@@ -5457,7 +5458,8 @@ Products Collections Area CSS
         margin-right: 15px;
         
         select {
-            background-color: transparent;
+            background-color: $dark-color;
+            color: $white-color;
             border: none;
             padding: 0;
             cursor: pointer;
@@ -5466,7 +5468,8 @@ Products Collections Area CSS
     }
     .products-ordering-list {
         select {
-            background-color: transparent;
+            background-color: $dark-color;
+            color: $white-color;
             border: none;
             padding: 0;
             cursor: pointer;
@@ -5603,6 +5606,7 @@ Woocommerce Sidebar Area CSS
         }
         .collapse-widget-title {
             font-size: 16px;
+            color: $neon-blue;
             text-transform: uppercase;
             margin-bottom: 0;
             cursor: pointer;
@@ -5639,6 +5643,7 @@ Woocommerce Sidebar Area CSS
         }
         .aside-widget-title {
             font-size: 16px;
+            color: $neon-blue;
             text-transform: uppercase;
             margin-bottom: 0;
             position: relative;
@@ -5690,8 +5695,8 @@ Woocommerce Sidebar Area CSS
                         text-align: center;
 
                         &:hover, &:focus {
-                            border-color: $black-color;
-                            color: $black-color;
+                            border-color: $neon-blue;
+                            color: $white-color;
 
                             &::before {
                                 color: red;
@@ -5708,8 +5713,8 @@ Woocommerce Sidebar Area CSS
                     }
                     &.active {
                         a {
-                            border-color: $black-color;
-                            color: $black-color;
+                            border-color: $neon-blue;
+                            color: $neon-blue;
                         }
                     }
                 }
@@ -5752,12 +5757,12 @@ Woocommerce Sidebar Area CSS
                     color: #858585;
 
                     &:hover, &:focus {
-                        color: $black-color;
+                        color: $neon-blue;
                     }
                 }
                 &.active {
                     a {
-                        color: $black-color;
+                        color: $neon-blue;
                     }
                 }
                 &:last-child {
@@ -5819,8 +5824,8 @@ Woocommerce Sidebar Area CSS
                     text-align: center;
 
                     &:hover, &:focus {
-                        border-color: $black-color;
-                        color: $black-color;
+                        border-color: $neon-blue;
+                        color: $white-color;
                     }
                 }
                 &.active {
@@ -5845,12 +5850,12 @@ Woocommerce Sidebar Area CSS
                     color: #858585;
 
                     &:hover, &:focus {
-                        color: $black-color;
+                        color: $neon-blue
                     }
                 }
                 &.active {
                     a {
-                        color: $black-color;
+                        color: $neon-blue
                     }
                 }
                 &:last-child {
@@ -6035,7 +6040,7 @@ Woocommerce Sidebar Area CSS
                         color: $paragraph-color;
 
                         &:hover {
-                            color: $black-color;
+                            color: $neon-blue;
                         }
                     }
                 }
@@ -6046,10 +6051,10 @@ Woocommerce Sidebar Area CSS
                         top: 6px;
                     }
                     a {
-                        color: $black-color;
+                        color: $white-color;
         
                         &:hover, &:focus {
-                            color: $black-color;
+                            color: $neon-blue
                         }
                     }
                 }
@@ -6060,9 +6065,10 @@ Woocommerce Sidebar Area CSS
                     span {
                         font-size: 17px;
                         display: inline-block;
+                        color: $white-color
                     }
                     .old-price {
-                        color: #858585;
+                        color: $grey-color;
                         font-size: 15px;
                         text-decoration: line-through;
                     }
@@ -6511,10 +6517,12 @@ Contact Area CSS
 .contact-info {
     h3 {
         font-size: 18px;
+        color: $neon-blue;
         margin-bottom: 10px;
     }
     p {
         margin-bottom: 0;
+        color: $white-color;
     }
     .contact-list {
         list-style-type: none;
@@ -6531,17 +6539,17 @@ Contact Area CSS
             padding-left: 20px;
 
             i {
-                color: $black-color;
+                color: $white-color;
                 position: absolute;
                 left: 0;
                 top: 2px;
             }
             a {
-                color: $paragraph-color;
+                color: $white-color;
                 display: inline-block;
 
                 &:hover, &:focus {
-                    color: $black-color;
+                    color: $neon-blue
                 }
             }
             &:last-child {
@@ -6581,8 +6589,8 @@ Contact Area CSS
             margin-right: 4px;
             
             a {
-                color: $paragraph-color;
-                border: 1px solid #eeeeee;
+                color: $neon-blue;
+                border: 1px solid $white-color;
                 width: 35px;
                 height: 35px;
                 font-size: 13px;
@@ -6593,7 +6601,7 @@ Contact Area CSS
                 &:hover, &:focus {
                     background-color: $black-color;
                     color: $white-color;
-                    border-color: $black-color;
+                    border-color: $neon-blue
                 }
             }
             &:last-child {
@@ -6605,6 +6613,7 @@ Contact Area CSS
 .contact-form {
     h3 {
         font-size: 18px;
+        color: $neon-blue;
         margin-bottom: 10px;
     }
     p {
@@ -8779,10 +8788,10 @@ Pagination CSS
                 width: 35px;
                 line-height: 35px;
                 height: 35px;
-                color: $black-color;
+                color: $white-color;
                 transition: $transition;
                 border: {
-                    bottom: 1px solid $paragraph-color;
+                    bottom: 1px solid $white-color;
                 };
                 font: {
                     size: $font-size;
@@ -8791,12 +8800,12 @@ Pagination CSS
                 &.dots {
                     border-color: $paragraph-color !important;
                     background-color: transparent !important;
-                    color: $paragraph-color !important;
+                    color: $neon-blue !important;
                 }
                 &:hover, &.current {
-                    background-color: $black-color;
+                    background-color: $grey-color;
                     color: $white-color;
-                    border-color: $black-color;
+                    border-color: $neon-blue
                 }
             }
         }

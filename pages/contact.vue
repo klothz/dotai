@@ -22,30 +22,13 @@
                             <p>Have a question? You may find an answer in our FAQs. But you can also contact us.</p>
 
                             <ul class="contact-list">
-                                <li><i class="fas fa-map-marker-alt"></i> Location: 2750 Quadra Street Victoria, Canada</li>
-                                <li><i class="fas fa-phone"></i> Call Us: <a href="#">(+123) 456-7898</a></li>
-                                <li><i class="far fa-envelope"></i> Email Us: <a href="#">support@comero.com</a></li>
-                                <li><i class="fas fa-fax"></i> Fax: <a href="#">+123456</a></li>
-                            </ul>
-
-                            <h3>Opening Hours:</h3>
-                            <ul class="opening-hours">
-                                <li><span>Monday:</span> 8AM - 6AM</li>
-                                <li><span>Tuesday:</span> 8AM - 6AM</li>
-                                <li><span>Wednesday:</span> 8AM - 6AM</li>
-                                <li><span>Thursday - Friday:</span> 8AM - 6AM</li>
-                                <li><span>Sunday:</span> Closed</li>
+                                <li><i class="far fa-envelope"></i> Email Us: <a href="#">klothz@gmail.com</a></li>
                             </ul>
 
                             <h3>Follow Us:</h3>
                             <ul class="social">
-                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                                 <li><a href="#"><i class="fab fa-twitter"></i></a></li>
                                 <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                <li><a href="#"><i class="fab fa-behance"></i></a></li>
-                                <li><a href="#"><i class="fab fa-skype"></i></a></li>
-                                <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
-                                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
                             </ul>
                         </div>
                     </div>
