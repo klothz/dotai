@@ -41,11 +41,7 @@ export default {
                 },
                 {
                     id: 2,
-                    text: '<strong>Leading in Cyberpunk Techwear</strong>'
-                },
-                {
-                    id: 1,
-                    text: '<strong>Welcome to Klothz.AI</strong>'
+                    text: '<strong>Website Still Under Construction!!!</strong>'
                 },
             ]
         }
