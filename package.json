@@ -1,7 +1,7 @@
 {
-  "name": "bolster",
+  "name": "klothz.ai",
   "version": "1.0.0",
-  "description": "Bolster is a clean and modern purse Vue Nuxt.js eCommerce template. This is built on Vue.js, Nuxt.js, Vuex, Firebase, Sass and Bootstrap 4. Bolster has included with an easy checkout feature. It has responsive beautiful design layouts with amazing Retina Ready visual UX/ UI experience.",
+  "description": "Klothz.AI makes clothes",
   "author": "EnvyTheme.com",
   "private": true,
   "scripts": {
