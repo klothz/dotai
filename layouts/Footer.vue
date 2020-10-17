@@ -19,7 +19,7 @@
                         <h3>Contact Us</h3>
 
                         <ul class="footer-contact-info">
-                            <li><i class="far fa-envelope"></i> Email Us: <a href="#">klothz@gmail.com</a></li>
+                            <li><i class="far fa-envelope"></i> Email Us: <a href="#">klothzai@gmail.com</a></li>
                         </ul>
                     </div>
                 </div>

@@ -22,13 +22,13 @@
                             <p>Have a question? You may find an answer in our FAQs. But you can also contact us.</p>
 
                             <ul class="contact-list">
-                                <li><i class="far fa-envelope"></i> Email Us: <a href="#">klothz@gmail.com</a></li>
+                                <li><i class="far fa-envelope"></i> Email Us: <a href="#">klothzai@gmail.com</a></li>
                             </ul>
 
                             <h3>Follow Us:</h3>
                             <ul class="social">
                                 <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="https://www.instagram.com/klothz.ai/"><i class="fab fa-instagram"></i></a></li>
                             </ul>
                         </div>
                     </div>

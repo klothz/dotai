@@ -46,7 +46,7 @@
 
                             <div @click="closeSidebarPanel" class="product-cart-btn">
                                 <nuxt-link to="/checkout" class="btn btn-primary">Proceed to Checkout</nuxt-link>
-                                <nuxt-link to="/cart" class="btn btn-light">View Shopping Cart</nuxt-link>
+                                <nuxt-link to="/cart" class="btn btn-primary">View Shopping Cart</nuxt-link>
                             </div>
                         </div>
                         <div class="modal-body" v-else>

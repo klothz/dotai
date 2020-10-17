@@ -17,7 +17,7 @@
                         <div class="icon">
                             <i class="far fa-credit-card"></i>
                         </div>
-                        <h3>Many payment gatways</h3>
+                        <h3>Many payment gateways</h3>
                     </div>
                 </div>
 
