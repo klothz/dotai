@@ -6,7 +6,7 @@ export default {
   */
   target: 'static',
   router: {
-    base: '/dotai/'
+    base: '/dotai/gh-pages'
   },
   head: {
     htmlAttrs: {
