@@ -4,6 +4,10 @@ export default {
   /*
   ** Headers of the page
   */
+  target: 'static',
+  router: {
+    base: '/dotai/'
+  },
   head: {
     htmlAttrs: {
       lang: 'en',
