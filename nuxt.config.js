@@ -34,6 +34,7 @@ export default {
     { src: '~/plugins/vue-backtotop', ssr: false },
     { src: '~/plugins/vue-toastification', ssr: false },
     { src: '~/plugins/vueperslides', ssr: false },
+    { src: '~/plugins/vue-stripe-checkout.js', ssr: false },
     // { src: '~/plugins/firebase' },
   ],
   /*
@@ -49,7 +50,7 @@ export default {
     // Doc: https://bootstrap-vue.js.org
     'bootstrap-vue/nuxt',
     // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios',
+    '@nuxtjs/axios'
   ],
   /*
   /*
@@ -83,5 +84,8 @@ export default {
     */
     extend (config, ctx) {
     }
+  },
+  env: {
+    STRIPE_PK: process.env.STRIPE_PK,
   }
 }
