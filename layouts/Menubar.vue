@@ -12,12 +12,6 @@
                         <b-navbar-toggle target="navbarSupportedContent"></b-navbar-toggle>
 
                         <b-collapse class="collapse navbar-collapse" id="navbarSupportedContent" is-nav>
-                            <ul class="navbar-nav">
-                                <li class="nav-item">
-                                    <nuxt-link to="/contact" class="nav-link">Contact</nuxt-link>
-                                </li>
-                            </ul>
-
                             <div class="others-option">
                                 <div class="option-item">
                                     <a @click.prevent="toggle" href="#">
