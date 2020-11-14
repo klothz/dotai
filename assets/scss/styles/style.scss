@@ -62,7 +62,7 @@ Default CSS
 $font-family: 'Archivo', sans-serif;
 $font-size: 14px;
 $paragraph-color: #666666;
-$black-color: #222222;
+$black-color: #0e0d0d;
 $white-color: #ffffff;
 $transition: .5s;
 
@@ -951,7 +951,7 @@ Navbar Area CSS
     }
 }
 .comero-nav {
-    background-color: $dark-color;
+    background-color: $black-color;
     padding: {
         top: 3px;
         bottom: 3px;

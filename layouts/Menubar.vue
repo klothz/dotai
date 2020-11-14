@@ -13,17 +13,12 @@
 
                         <b-collapse class="collapse navbar-collapse" id="navbarSupportedContent" is-nav>
                             <ul class="navbar-nav">
-                                <li class="nav-item"><nuxt-link to="/products" class="nav-link">Products</nuxt-link></li>
-                                <li class="nav-item"><nuxt-link to="/blog-one" class="nav-link">Blog</nuxt-link></li>
                                 <li class="nav-item">
                                     <nuxt-link to="/contact" class="nav-link">Contact</nuxt-link>
                                 </li>
                             </ul>
 
                             <div class="others-option">
-                                <div class="option-item">
-                                    <nuxt-link to="/login">Login</nuxt-link>
-                                </div>
                                 <div class="option-item">
                                     <a @click.prevent="toggle" href="#">
                                         Cart({{cart.length}}) <i class="fas fa-shopping-bag"></i>
