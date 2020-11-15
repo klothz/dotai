@@ -82,12 +82,7 @@ export default {
   data () {
     this.pk = process.env.STRIPE_PK;
     return {
-      items: [
-        {
-          sku: 'sku_IDpuJAAceG4O7R',
-          quantity: 15,
-        },
-      ],
+      items: [],
       successUrl: 'http://localhost:3000',
       cancelUrl: 'http://localhost:3000',
     };
@@ -103,8 +98,21 @@ export default {
       return store.isNavOpen;
     },
     cart() {
-      return this.$store.getters.cart;
+      let cartItems = this.$store.getters.cart
+
+      this.items = [];
+
+      cartItems.forEach((item) => {
+          this.items.push({
+            sku: item.id,
+            quantity: item.quantity
+          })
+      })
+      
+      console.log(this.items)
+      return cartItems;
     },
+    
     cartTotal() {
       return this.$store.getters.totalAmount;
     },
