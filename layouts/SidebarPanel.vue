@@ -29,7 +29,6 @@
                     <h3>
                       <a href="#">{{ cart.name }}</a>
                     </h3>
-                    <span>Blue / XS</span>
                     <div class="product-price">
                       <span>{{ cart.quantity }}</span>
                       <span>x</span>
@@ -50,9 +49,6 @@
                 class="product-cart-btn"
                 id="cartButtonGroup"
               >
-                <nuxt-link to="/cart" class="btn btn-primary"
-                  >View Shopping Cart</nuxt-link
-                >
                 <stripe-checkout
                   ref="checkoutRef"
                   :pk="pk"

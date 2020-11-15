@@ -8,8 +8,7 @@
             </div>
 
             <ul class="product-info">
-                <li><span>Availability:</span> <a href="#">In stock (7 items)</a></li>
-                <li><span>Product Type:</span> <a href="#">T-Shirt</a></li>
+                <li><span>Product Type:</span> <a href="#">{{type}}</a></li>
             </ul>
 
             <div class="product-size-wrapper">
@@ -50,7 +49,7 @@ export default {
             quantity: 1
         }
     },
-    props: ['id', 'name', 'price', 'image' ],
+    props: ['id', 'name', 'price', 'image', 'type' ],
     computed: {
         cart(){
             return this.$store.getters.cart

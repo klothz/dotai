@@ -15,14 +15,16 @@
         <section class="products-details-area ptb-60">
             <div class="container">
                 <div class="row">
-                    <ProductImages />
+                    <ProductImages 
+                        :image = "product.image"
+                    />
                     <Details 
                         :id = "product.id"
                         :name = "product.name" 
                         :price = "product.price"
                         :image = "product.image"
+                        :type = "product.itemType"
                     />
-                    <DetailsInfo />
                 </div>
             </div>
         </section>

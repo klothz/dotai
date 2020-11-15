@@ -8,6 +8,10 @@ const state = () => ({
             offer: false,
             offerPrice: -10,
             bestSellers: true,
+            sizes: [
+                "OS"
+            ],
+            itemType: 'Accessory',
             image: require('../assets/productImages/sku_IDpuJAAceG4O7R.png'),
             imageHover: require('../assets/productImages/sku_IDpuJAAceG4O7R.png'),
         },
