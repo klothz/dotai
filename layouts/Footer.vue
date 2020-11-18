@@ -4,13 +4,6 @@
             <div class="row">
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="single-footer-widget">
-                        <h3>Quick Links</h3>
-
-                        <ul class="quick-links">
-                            <li><nuxt-link to="/products">Products</nuxt-link></li>
-                            <li><nuxt-link to="/cart">Cart</nuxt-link></li>
-                            <li><nuxt-link to="/blog-one">Blog</nuxt-link></li>
-                        </ul>
                     </div>
                 </div>
 

@@ -3,10 +3,7 @@
         <!-- Start Best Sellers Area -->
         <section class="best-sellers-area pb-60">
             <div class="container">
-                <div class="section-title">
-                    <h2><span class="dot"></span> Best Sellers</h2>
-                </div>
-
+                <br>
                 <div class="row">
 
                     <ProductItem
