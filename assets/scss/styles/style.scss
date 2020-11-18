@@ -9020,10 +9020,7 @@ Go Top CSS
 }
 
 .titleGlow {
-    font: {
-        size: 25px;
-        weight: 600;
-    }
+    color: $white-color;
     font-family: $font-family;
     -webkit-animation: neon6 3s ease-in-out infinite alternate;
     -moz-animation: neon6 3s ease-in-out infinite alternate;
@@ -9050,10 +9047,10 @@ Go Top CSS
 
 @keyframes neon6 {
     from {
-        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #00ffff, 0 0 30px #00ffff, 0 0 40px #00ffff, 0 0 60px #00ffff, 0 0 80px #00ffff;
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #00ffff, 0 0 30px #00ffff, 0 0 35px #00ffff, 0 0 40px #00ffff, 0 0 60px #00ffff;
     }
     to {
-      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #00ffff, 0 0 35px #00ffff, 0 0 40px #00ffff, 0 0 50px #00ffff, 0 0 75px #00ffff;
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #00ffff, 0 0 30px #00ffff, 0 0 35px #00ffff, 0 0 40px #00ffff, 0 0 60px #00ffff;
     }
   }
   

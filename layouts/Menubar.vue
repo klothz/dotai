@@ -14,7 +14,7 @@
                         <b-collapse class="collapse navbar-collapse" id="navbarSupportedContent" is-nav>
                             <div class="others-option">
                                 <div class="option-item">
-                                    <a @click.prevent="toggle" href="#">
+                                    <a class="titleGlow" @click.prevent="toggle" href="#">
                                         Cart({{cart.length}}) <i class="fas fa-shopping-bag"></i>
                                     </a>
                                 </div>
