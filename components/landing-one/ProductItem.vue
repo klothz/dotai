@@ -7,20 +7,7 @@
                     <img :src="product.image" :alt="product.name">
                     <img :src="product.imageHover" :alt="product.name">
                 </nuxt-link>
-
-                <ul>
-                    <li>
-                        <a 
-                            href="javascript:void(0)" 
-                            title="Quick View"
-                            v-b-tooltip.hover
-                            @click.prevent="quickView"
-                        >
-                            <i class="far fa-eye"></i>
-                        </a>
-                    </li>
-                </ul>
-                
+     
                 <Timer v-if="product.timePeriod" v-bind:dateTime="product.dateTime"></Timer>
             </div>
 

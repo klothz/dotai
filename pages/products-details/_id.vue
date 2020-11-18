@@ -48,7 +48,7 @@ export default {
     },
     computed: {
         product(){
-            return this.$store.state.products.all.find(product => product.id === parseInt(this.id));
+            return this.$store.state.products.all.find(product => product.id === this.id);
         }
     }
 }
