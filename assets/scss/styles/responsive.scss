@@ -80,7 +80,6 @@ $value_five: 1199px;
 
     .navbar-area {
         padding: {
-            top: 15px;
             bottom: 15px;
         };
         .navbar-light {
@@ -90,7 +89,7 @@ $value_five: 1199px;
                 border-radius: 0;
 
                 .navbar-toggler-icon {
-                    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+                    background-image: url("../../img/hamburger.svg");
                 }
             }
         }
@@ -99,7 +98,6 @@ $value_five: 1199px;
         .navbar {
             .navbar-nav {
                 margin-left: 0;
-                border: 1px solid #ebebeb;
                 margin-top: 15px;
                 padding: 10px 20px;
                 height: 350px;
@@ -133,7 +131,6 @@ $value_five: 1199px;
             }
             .others-option {
                 margin-left: 0;
-                border: 1px solid #ebebeb;
                 border-top: none;
                 padding: {
                     left: 20px;
