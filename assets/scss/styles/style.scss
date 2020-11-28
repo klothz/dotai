@@ -290,7 +290,7 @@ img {
 Template Boxed Area CSS
 =================================================*/
 .comero-boxed {
-    background: #f7f8fa;
+    background: #0e0d0d;
 
     body {
         background: $dark-color;
@@ -828,7 +828,7 @@ Navbar Area CSS
         width: 100%;
         z-index: 999;
         box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.06);
-        background-color: $white-color !important;
+        background-color: #0e0d0d !important;
         animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
     }
     .container-fluid {
@@ -4048,6 +4048,7 @@ Best Sellers Area CSS
 .best-sellers-area {
     padding-bottom: 30px;
     background-color: $dark-color;
+    flex: 1
 }
 .best-sellers-products-slides {
     &.owl-theme {
@@ -9054,3 +9055,9 @@ Go Top CSS
     }
   }
   
+.Site {
+  display: flex;
+  min-height: 80vh;
+  flex-direction: column;
+  background: $dark-color;
+}

@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="Site">
         <!-- Start Page Title Area -->
         <div class="page-title-area">
             <div class="container">

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="Site">
     <BestSellers></BestSellers>
   </div>
 </template>
