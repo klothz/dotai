@@ -1,7 +1,7 @@
 <template>
     <client-only>
         <div class="col-lg-6 col-md-6">
-            <div class="products-page-gallery">
+            <div class="products-page-gallery" style="animation:border-flicker-blue 3s linear infinite;">
                 <div class="product-page-gallery-main">
                     <vueper-slides
                         :bullets = "false"

@@ -2,7 +2,7 @@
     <div 
         :class="className">
         <div class="single-product-box">
-            <div class="product-image">
+            <div class="product-image" style='animation:border-flicker-pink 3s linear infinite;'>
                 <nuxt-link :to="`/products-details/${product.id}`">
                     <img :src="product.image" :alt="product.name">
                     <img :src="product.imageHover" :alt="product.name">
