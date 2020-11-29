@@ -2,7 +2,7 @@
     <div 
         :class="className">
         <div class="single-product-box">
-            <div class="product-image" style='animation:border-flicker-pink 3s linear infinite;'>
+            <div class="product-image" v-bind:style="{animation: glowClass}">
                 <nuxt-link :to="`/products-details/${product.id}`">
                     <img :src="product.image" :alt="product.name">
                     <img :src="product.imageHover" :alt="product.name">
@@ -53,12 +53,13 @@ export default {
     components: {
         Timer
     },
+    props: ['product', 'className', 'glow'],
     data(){
         return {
-            getExistPId: null
+            getExistPId: null,
+            glowClass: this.glow
         }
     },
-    props: ['product', 'className'],
     computed: {
         cart(){
             return this.$store.getters.cart

@@ -7,9 +7,10 @@
                 <div class="row">
 
                     <ProductItem
-                        v-for="product in products"
+                        v-for="(product, index) in products"
                         :product="product"
                         :key="product.id"
+                        :glow="colors[index % 2]"
                         @clicked="toggle"
                         :className="`col-lg-3 col-md-6 col-sm-6`"
                     ></ProductItem>
@@ -39,6 +40,9 @@ export default {
     computed: {
         products(){
             return this.$store.state.products.all.filter(product => product.bestSellers === true)
+        },
+        colors(){
+            return ["border-flicker-blue 3s linear infinite;", "border-flicker-pink 2s linear infinite;"]
         }
     }
 }
