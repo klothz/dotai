@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/products-details/sku_IOLJnGfse0Swdh", {data:[{}],fetch:[],mutations:[]});

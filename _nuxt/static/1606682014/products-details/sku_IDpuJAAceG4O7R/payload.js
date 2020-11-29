@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/products-details/sku_IDpuJAAceG4O7R", {data:[{}],fetch:[],mutations:[]});
